@@ -66,4 +66,23 @@ dependencies {
     implementation(libs.camera.lifecycle)
     implementation(libs.androidx.exifinterface)
 
+    // Library Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+
+    // Library Room
+//    implementation ("androidx.room:room-runtime:2.5.2")
+//    implementation ("androidx.room:room-ktx:2.5.2")
+//    ksp ("androidx.room:room-compiler:2.5.2")
+
+    // Coroutine
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+
+    // Glide
+    implementation (libs.glide)
+
 }

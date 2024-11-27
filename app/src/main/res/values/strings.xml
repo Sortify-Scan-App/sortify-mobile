@@ -95,6 +95,8 @@
     <string name="scan_5">Earn points by scanning 5 waste items\nper day and exchange them for rewards</string>
     <string name="redeem_points">Redeem Points</string>
     <string name="icon_star">icon_star</string>
+    <string name="article_image">Article Image</string>
+    <string name="see_more">See More</string>
 
 
 </resources>
