@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
+    id("com.google.devtools.ksp")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -59,7 +62,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.dotsindicator) //for indicatior onboarding
+    // Indicator Onboarding
+    implementation(libs.dotsindicator)
 
     implementation(libs.camera.view)
     implementation(libs.androidx.camera.camera2)
@@ -74,9 +78,9 @@ dependencies {
 
 
     // Library Room
-//    implementation ("androidx.room:room-runtime:2.5.2")
-//    implementation ("androidx.room:room-ktx:2.5.2")
-//    ksp ("androidx.room:room-compiler:2.5.2")
+    implementation (libs.androidx.room.runtime)
+    implementation (libs.androidx.room.ktx)
+    ksp (libs.androidx.room.compiler)
 
     // Coroutine
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
@@ -84,5 +88,14 @@ dependencies {
 
     // Glide
     implementation (libs.glide)
+
+    // Lottie Animation
+    implementation(libs.lottie)
+
+    // Maps
+    implementation (libs.play.services.maps)
+
+    // Datastore & Preferences
+    implementation(libs.androidx.datastore.preferences)
 
 }

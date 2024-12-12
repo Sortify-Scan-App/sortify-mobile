@@ -4,12 +4,12 @@
         android:icon="@drawable/home_selector"
         android:titleTextAppearance="@style/MenuItemTextAppearance"/>
 
-    <item android:id="@+id/mSearch"
+    <item android:id="@+id/mMaps"
         android:title="@string/maps"
         android:icon="@drawable/maps_selector"
         android:titleTextAppearance="@style/MenuItemTextAppearance"/>
 
-    <item android:id="@+id/mplaceholder"
+    <item
         android:title=""
         android:titleTextAppearance="@style/MenuItemTextAppearance"/>
 

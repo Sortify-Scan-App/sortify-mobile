@@ -9,22 +9,12 @@
     android:background="@android:color/white"
     tools:context=".ui.scan.ScanFragment">
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/progressIndicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_classification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="32dp"
         android:text="@string/waste_classification"
         android:textColor="@color/custom_text"
         android:textSize="24sp"
@@ -38,12 +28,12 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardNotes"
         android:layout_width="340dp"
-        android:layout_height="74dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:elevation="0dp"
-        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardBackgroundColor="@color/custom_text"
         app:cardCornerRadius="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,77 +44,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="26dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="26dp"
             android:fontFamily="@font/sb_jakarta"
-            android:gravity="center"
+            android:gravity="start"
             android:letterSpacing="-0.03"
             android:text="@string/note"
             android:textColor="@android:color/white"
-            android:textSize="10sp" />
+            android:textSize="12sp"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/ic_note"
+            app:drawableTint="@android:color/white"
+            />
 
     </androidx.cardview.widget.CardView>
+
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardPoint"
+        android:id="@+id/layoutImageView"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="400dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:elevation="0dp"
-        app:cardBackgroundColor="@color/custom_text"
-        app:cardCornerRadius="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/cardNotes">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:padding="13dp">
-
-            <ImageView
-                android:id="@+id/ivStarIcon"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/ic_star"
-                android:contentDescription="@string/icon_star"
-                app:tint="@android:color/white" />
-
-            <TextView
-                android:id="@+id/tvPoint"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sb_jakarta"
-                android:letterSpacing="-0.03"
-                android:text="Receive a point from scanning 5 waste items"
-                android:textColor="@android:color/white"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/previewImageView"
-        android:layout_width="340dp"
-        android:layout_height="340dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_image"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_placeholder"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        android:backgroundTint="@color/accent_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardPoint"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/cardNotes"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/previewImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_view"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_placeholder" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/tv_info"
@@ -138,7 +99,7 @@
         android:letterSpacing="-0.03"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/previewImageView"
+        app:layout_constraintTop_toBottomOf="@+id/layoutImageView"
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
@@ -199,7 +160,7 @@
         android:backgroundTint="@color/md_theme_primary"
         android:paddingStart="14dp"
         android:paddingEnd="14dp"
-        android:text="@string/analyze_photo"
+        android:text="@string/scan_photo"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         android:letterSpacing="-0.02"
@@ -214,5 +175,19 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonLayout"
         app:layout_constraintVertical_bias="0.0" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_loading"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.40"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/scan_loading" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

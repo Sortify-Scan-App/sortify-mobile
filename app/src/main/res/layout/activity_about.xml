@@ -71,7 +71,8 @@
         android:text="@string/desc_app"
         android:textColor="@color/custom_text"
         android:textSize="14sp"
-        android:letterSpacing="-0.03"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_version" />

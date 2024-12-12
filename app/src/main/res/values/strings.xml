@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Sortify</string>
     <string name="splash_image">SplashImage</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_title">Welcome to\nSortify</string>
-    <string name="message_1">Sortify is a one-stop solution for healthy,\nsustainable living. Scan to identify waste,\nlearn DIY crafts, and use the garbage\npickup service - all in one convenient app!</string>
+    <string name="message_1">Sortify is your one-stop solution for healthy,\nsustainable living. Scan to identify waste and explore\ncreative ways to repurpose it into something useful.</string>
     <string name="message_2">Scan waste, get insights to help save our\noceans from plastic pollution.</string>
-    <string name="message_3">Scan waste, get insights to help save our\noceans from plastic pollution.</string>
+    <string name="message_3">Learn creative and fun DIY crafts to repurpose\nwaste into useful or decorative items."</string>
     <string name="onboarding">OnBoarding Photo</string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
     <string name="title_onboarding2">Scan Waste\nSave the Seas</string>
     <string name="title_onboarding3">Craft from\nWaste</string>
     <string name="sign_in_text">Sign In to\n Your Account</string>
@@ -22,7 +22,6 @@
     <string name="create_account">Create Account</string>
     <string name="authentication_image">Authentication Image</string>
     <string name="sign_in">Sign In</string>
-    <string name="sign_in_with_google">Sign In with Google</string>
     <string name="create_an_account">Create an Account</string>
     <string name="fill_out">Fill out your profile to get the most out of it!</string>
     <string name="sign_up">Sign Up</string>
@@ -32,12 +31,9 @@
     <string name="back_button">Back Button</string>
     <string name="otp_verification">OTP Verification</string>
     <string name="see_the_verification_code">Check your email to see the verification code</string>
-    <string name="enter_4_digit_code">Enter 4 digit code</string>
+    <string name="enter_digit_code">Enter 6 digit code</string>
     <string name="verify">Verify</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="scan_button">Scan Button</string>
     <string name="home">Home</string>
     <string name="maps">Maps</string>
@@ -45,15 +41,13 @@
     <string name="profile">Profile</string>
     <string name="background_image">Background Image</string>
     <string name="willy_radiansyah">Willy Radiansyah</string>
-    <string name="greeting">Hello,</string>
-    <string name="sortify_desc">Sortify is this cool app for healthy\nliving that helps you easily tell\norganic and inorganic waste apart</string>
     <string name="did_you_know">Did You Know?</string>
     <string name="think_image">Think Image</string>
     <string name="classifiable_waste">Classifiable Waste</string>
     <string name="article">Article</string>
     <string name="plastic">Plastic</string>
     <string name="metal">Metal</string>
-    <string name="board">Board</string>
+    <string name="board">Cardboard</string>
     <string name="residue">Residue</string>
     <string name="glass">Glass</string>
     <string name="paper">Paper</string>
@@ -62,10 +56,8 @@
     <string name="information">Insert an image from your camera or gallery and click\nScan Photo to identify the waste classification.</string>
     <string name="take_a_photo">Take a photo</string>
     <string name="choose_from_gallery">Choose from gallery</string>
-    <string name="analyze_photo">Analyze Photo</string>
+    <string name="scan_photo">Scan Photo</string>
     <string name="classification_result">Classification Result</string>
-    <string name="plastic_waste">Plastic Waste</string>
-    <string name="score">99,9%</string>
     <string name="user_icon">User Icon</string>
     <string name="change_password">Change password</string>
     <string name="edit_profile">Edit profile</string>
@@ -73,14 +65,11 @@
     <string name="account">Account</string>
     <string name="setting">Setting</string>
     <string name="about_app">About App</string>
-    <string name="language">Language</string>
-    <string name="dark_mode">Dark Mode</string>
     <string name="logout">Logout</string>
-    <string name="enter_your_address">Enter your address</string>
     <string name="confirm_your_new_password">Confirm your new Password</string>
     <string name="enter_your_new_password">Enter your new Password</string>
     <string name="version_1_0">Version 1.0</string>
-    <string name="desc_app">Sortify is a one-stop solution for healthy, sustainable\nliving. Scan to identify waste, learn DIY crafts, and use\nthe garbage pickup service - all in one convenient app!</string>
+    <string name="desc_app">Sortify is a waste scanner application, this application\nitself was created because it saw the waste problem in\nIndonesian society, which did not yet understand the\nimportance of sorting waste properly. Meanwhile, many\npeople just throw rubbish into the trash instead of using\nit. By looking at this problem, we initiated through our\napplication introducing various types of waste and\nproviding creative solutions to utilize the waste itself.</string>
     <string name="designed_by">
     This app was designed by:\n
     1. Adam Dirham – Institut Teknologi Sepuluh\nNopember (Machine Learning)\n
@@ -91,12 +80,50 @@
     6. Muhammad Ramadhan – Universitas Widyatama\n(Mobile Development)\n
     7. Sutanto Dwi Putra – STMIK Mardira Indonesia\n(Mobile Development)
 </string>
-    <string name="daily">Daily Challenge</string>
-    <string name="scan_5">Earn points by scanning 5 waste items\nper day and exchange them for rewards</string>
-    <string name="redeem_points">Redeem Points</string>
-    <string name="icon_star">icon_star</string>
+    <string name="redeem">Redeem Your Waste</string>
     <string name="article_image">Article Image</string>
     <string name="see_more">See More</string>
-
+    <string name="image_view">Image View</string>
+    <string name="see_diy_recommendation">See DIY Recommendation</string>
+    <string name="image_scan">Image Scan</string>
+    <string name="morning_greeting">Good Morning,</string>
+    <string name="afternoon_greeting">Good Afternoon,</string>
+    <string name="evening_greeting">Good Evening,</string>
+    <string name="night_greeting">Good Night,</string>
+    <string name="caption">Every piece of waste can be useful, let\'s sort it right!</string>
+    <string name="waste_value">Your waste is more valuable than you\nthink, exchange it for cash!</string>
+    <string name="nearest_waste_bank">Nearest Waste Bank</string>
+    <string name="redeem_your_waste">Redeem Your Waste</string>
+    <string name="money_image">Money Image</string>
+    <string name="headline_point">Good Things Take Time!</string>
+    <string name="description">Description</string>
+    <string name="fun_fact">Fun Fact</string>
+    <string name="login_successful">Login Successful!</string>
+    <string name="login_message">Welcome! Let\'s Protect the Earth,\nSort Waste Smartly!</string>
+    <string name="register_successful">Registration Successful!</string>
+    <string name="register_message">You have successfully registered!\nNow, let\'s log in to your account</string>
+    <string name="logout_confirm_title">Logout Confirmation</string>
+    <string name="logout_confirm_message">Are you sure you want to logout?</string>
+    <string name="yes_text">Logout</string>
+    <string name="no_text">Cancel</string>
+    <string name="waste_result">Waste Result</string>
+    <string name="confidence_score">Confidence Score</string>
+    <string name="waste_result_history">Waste Result: </string>
+    <string name="confidence_score_history">Confidence Score: </string>
+    <string name="history_classification">History Classification</string>
+    <string name="trash_icon">trash icon</string>
+    <string name="error_empty_credentials">Please enter both email and password!</string>
+    <string name="error_invalid_credentials">Incorrect email or password! Please try again.</string>
+    <string name="delete">Delete</string>
+    <string name="delete_history">Delete History?</string>
+    <string name="can_t_be_undone">This can\'t be undone</string>
+    <string name="no_history">No history data available</string>
+    <string name="fab_waste">FAB Waste</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="edit_email">Edit Email</string>
+    <string name="email_account">Email Account</string>
+    <string name="edit_name">Edit Name</string>
+    <string name="reset_password">Reset Password</string>
 
 </resources>

@@ -108,10 +108,44 @@ import java.util.Locale
         }
     }
 
-    fun rotateImage(source: Bitmap, angle: Float): Bitmap? {
+    fun rotateImage(source: Bitmap, angle: Float): Bitmap {
         val matrix = Matrix()
         matrix.postRotate(angle)
         return Bitmap.createBitmap(
             source, 0, 0, source.width, source.height, matrix, true
         )
     }
+
+fun formatDate(dateString: String?): String {
+    if (dateString.isNullOrEmpty()) return "Tanggal tidak tersedia"
+    return try {
+        val originalFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val date: Date? = originalFormat.parse(dateString)
+        if (date == null) {
+            "Tanggal tidak tersedia"
+        } else {
+            val targetFormat = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
+            targetFormat.format(date)
+        }
+    } catch (e: Exception) {
+        "Tanggal tidak tersedia"
+    }
+}
+
+// Format waktu
+fun formatTime(timeString: String?): String {
+    if (timeString.isNullOrEmpty()) return "Waktu tidak tersedia"
+    return try {
+        val originalFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
+        val date: Date? = originalFormat.parse(timeString)
+        if (date == null) {
+            "Waktu tidak tersedia"
+        } else {
+            val targetFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+            targetFormat.format(date)
+        }
+    } catch (e: Exception) {
+        "Waktu tidak tersedia"
+    }
+}
+

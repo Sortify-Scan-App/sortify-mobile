@@ -47,7 +47,7 @@ class HomeActivity : AppCompatActivity() {
             setOnItemSelectedListener { item ->
                 val fragment: Fragment = when (item.itemId) {
                     R.id.mHome -> HomeFragment()
-                    R.id.mSearch -> MapsFragment()
+                    R.id.mMaps -> MapsFragment()
                     R.id.mHistory -> HistoryFragment()
                     R.id.mProfile -> ProfileFragment()
                     else -> return@setOnItemSelectedListener false

@@ -17,7 +17,7 @@
         android:contentDescription="@string/back_button"
         android:src="@drawable/ic_back"
         app:layout_constraintBottom_toTopOf="@+id/rv_articles"
-        app:layout_constraintEnd_toStartOf="@+id/tvPredictionHistory"
+        app:layout_constraintEnd_toStartOf="@+id/tvArticle"
         app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,14 +25,14 @@
         app:tint="@color/custom_text" />
 
     <TextView
-        android:id="@+id/tvPredictionHistory"
+        android:id="@+id/tvArticle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/b_jakarta"
         android:text="@string/article"
         android:textColor="@color/custom_text"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rv_articles"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPredictionHistory"
+        app:layout_constraintTop_toBottomOf="@id/tvArticle"
         tools:listitem="@layout/item_article" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sortify_loading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

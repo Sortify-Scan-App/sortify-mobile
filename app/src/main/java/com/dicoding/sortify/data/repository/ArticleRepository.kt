@@ -1,27 +1,26 @@
 package com.dicoding.sortify.data.repository
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
 import com.dicoding.sortify.data.remote.response.ArticlesItem
 import com.dicoding.sortify.data.remote.retrofit.ApiService
 
 class ArticleRepository private constructor(
     private val apiService: ApiService
 ) {
-    fun getArticle(): LiveData<List<ArticlesItem>> = liveData {
-        try {
+    suspend fun getArticle(): List<ArticlesItem> {
+        return try {
             val response = apiService.getArticles()
-            response.articles?.let { emit(it.filterNotNull()) }
+            response.articles?.filterNotNull() ?: emptyList()
         } catch (e: Exception) {
-            Log.e("ArticleRepository", "getArticle: ${e.message}")
-            emit(emptyList())
+            Log.e(TAG, "getArticles: ${e.message}", e)
+            emptyList()
         }
     }
 
     companion object {
         @Volatile
         private var instance: ArticleRepository? = null
+        private const val TAG = "ArticleRepository"
 
         fun getInstance(apiService: ApiService): ArticleRepository {
             return instance ?: synchronized(this) {
@@ -30,3 +29,4 @@ class ArticleRepository private constructor(
         }
     }
 }
+

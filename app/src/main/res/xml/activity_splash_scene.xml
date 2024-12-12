@@ -14,7 +14,6 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/backgroundLayout"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -24,7 +23,6 @@
             android:scaleX="10"
             android:scaleY="10" />
         <Constraint
-            android:id="@+id/colorLogo"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -35,7 +33,6 @@
             android:scaleY="0"
             android:alpha="0" />
         <Constraint
-            android:id="@+id/whiteLogo"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="100dp"
             android:layout_height="100dp"

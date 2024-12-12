@@ -2,7 +2,6 @@ package com.dicoding.sortify.adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -12,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.dicoding.sortify.R
 import com.dicoding.sortify.data.remote.response.ArticlesItem
 import com.dicoding.sortify.databinding.ItemArticleBinding
+import com.dicoding.sortify.ui.article.WebViewActivity
 
 class ArticleAdapter : ListAdapter<ArticlesItem, ArticleAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
@@ -35,8 +35,9 @@ class ArticleAdapter : ListAdapter<ArticlesItem, ArticleAdapter.MyViewHolder>(DI
                 .into(binding.imageView)
 
             itemView.setOnClickListener {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(news.link))
-                itemView.context.startActivity(intent)
+                    val intent = Intent(itemView.context, WebViewActivity::class.java)
+                    intent.putExtra(WebViewActivity.EXTRA_URL, news.link)
+                    itemView.context.startActivity(intent)
             }
         }
     }

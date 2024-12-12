@@ -1,38 +1,46 @@
 package com.dicoding.sortify.ui.maps
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.dicoding.sortify.databinding.FragmentMapsBinding
+import com.dicoding.sortify.R
+import com.dicoding.sortify.data.local.BankSampahData
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
-class MapsFragment : Fragment() {
+class MapsFragment : Fragment(R.layout.fragment_maps), OnMapReadyCallback {
 
-    private var _binding: FragmentMapsBinding? = null
+    private lateinit var mMap: GoogleMap
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    override fun onViewCreated(view: android.view.View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(MapsViewModel::class.java)
-
-        _binding = FragmentMapsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        return root
+        val mapFragment = childFragmentManager
+            .findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onMapReady(googleMap: GoogleMap) {
+        mMap = googleMap
+
+        for (bankSampah in BankSampahData.bankSampahList) {
+            val location = LatLng(bankSampah.latitude, bankSampah.longitude)
+            val marker = mMap.addMarker(
+                MarkerOptions()
+                    .position(location)
+                    .title(bankSampah.name)
+                    .snippet(bankSampah.address)
+            )
+            marker?.tag = bankSampah
+        }
+
+        val firstLocation = LatLng(
+            BankSampahData.bankSampahList[1].latitude,
+            BankSampahData.bankSampahList[1].longitude
+        )
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(firstLocation, 6f))
     }
 }
